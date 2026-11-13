@@ -1,0 +1,3 @@
+• Share menu pins: pin the apps you share to most. They show in the top row of the share menu, so you don't scroll to find them. Apps tab > Share menu pins (Android 10+).
+• Faster: the Work profile page opens about ten times faster, TinyKit starts quicker, and a slow switch no longer holds up your other taps.
+• Pressing a tab in the bottom bar now lights only the pill behind its icon, not a second box too.
