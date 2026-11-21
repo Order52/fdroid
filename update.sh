@@ -19,7 +19,7 @@ sed -i.bak "s/^CurrentVersion: .*/CurrentVersion: $ver/;s/^CurrentVersionCode: .
 cp metadata/io.github.order52.tinykit/en-US/images/icon.png icon.png
 mkdir -p repo/icons && cp icon.png repo/icons/icon.png
 # Keep only the 3 newest APKs.
-ls -1 repo/TinyKit-*.apk | sort -V | head -n -3 | xargs -I{} rm -f {}
+ls -1 repo/TinyKit-*.apk | sort -V | awk '{a[NR]=$0} END{for(i=1;i<=NR-3;i++)print a[i]}' | xargs -I{} rm -f {}
 fdroid update
 sed -i.bak "s#repo/TinyKit-[0-9.]*\.apk#repo/$apk#" index.html && rm index.html.bak
 git add -A
